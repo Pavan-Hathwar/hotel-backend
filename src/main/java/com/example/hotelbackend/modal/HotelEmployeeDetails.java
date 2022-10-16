@@ -3,17 +3,20 @@ package com.example.hotelbackend.modal;
 import javax.persistence.*;
 
 @Entity
-@Table(name="employeeDetails")
+@Table(name="hotelEmployeeDetails")
 
 public class HotelEmployeeDetails {
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    private long empId;
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
     @Column(name = "name")
     private String name;
     @Column(name = "email")
     private String emailId;
+    @Column
     private Long mobileNumber;
+    @Column
     private String password;
 
     public Long getMobileNumber() {
@@ -55,13 +58,13 @@ public class HotelEmployeeDetails {
         this.emailId = emailId;
     }
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
+//    public long getId() {
+//        return empId;
+//    }
+//
+//    public void setId(long id) {
+//        this.empId = id;
+//    }
 
     public HotelEmployeeDetails() {
 
